@@ -6,5 +6,7 @@ router.get('/', function(req, res, next) {
   res.send('Olá mundo!!');
 });
 
+let teste = require('./routes/teste')
+app.use('/teste',teste)
 
-module.exports = router;
+module.exports = app;

@@ -19,11 +19,4 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-let teste = require('./routes/teste')
-app.use('/teste', teste)
-
-const fornecedor = require('./routes/Fornecedor')
-app.use('/fornecedor', fornecedor)
-
-
 module.exports = app;
