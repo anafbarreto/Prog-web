@@ -1,1 +1,17 @@
 const Fornecedor = require('../models/Fornecedor')
+
+const controller = {} //objeto vazio
+
+controller.novo = (req, res) => {
+    try {
+    Fornecedor.create(req.body)  //HTTP Status 201: Created
+    res.sendStatus(201)
+    }
+    catch(erro) {
+        console.log(erro) //HTTP 500: Internal Server Error
+        res.status(500).send(erro)
+    }
+
+}
+
+module.exports = controller
