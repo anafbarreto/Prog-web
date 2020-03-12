@@ -85,4 +85,27 @@ controller.delete = async (req, res) => {
 
 }
 
+// consulta por parametro (endereco)
+async function busca (req, res){
+    let criterio = {}
+    const atrib = Object.keys(req.query)[0]
+    const valor = Object.values(req.query)[0]
+
+    criterio[atrib] = {$regex: valor, $options: 'i'} // $options: 'i' => case insensitive
+
+    console.log('Critério:')
+    Console.log(criterio)
+
+    try{
+        const lista = await Fornecedor.find(criterio)
+        res.send(lista)
+    }
+
+    catch(erro){
+        console.log(erro)
+        res.status(500).send(erro)
+    }
+}
+
+
 module.exports = controller
