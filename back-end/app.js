@@ -7,6 +7,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+const cors = require('cors')
+app.use(cors())
 
 const db = require('./config/database')
 db('mongodb://localhost:27017/4not2020')
