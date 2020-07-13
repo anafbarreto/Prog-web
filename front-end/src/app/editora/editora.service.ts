@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class FornecedorService {
+export class EditoraService {
 
   // injeção de dependencias: ao invés de criarmos manualmente as dependencias necessárias
   // o próprio Angular cria e injeta o objeto já instanciado

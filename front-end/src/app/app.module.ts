@@ -10,7 +10,8 @@ import { MainToolbarComponent } from './ui/main-toolbar/main-toolbar.component';
 import { MainMenuComponent } from './ui/main-menu/main-menu.component';
 import { MainFooterComponent } from './ui/main-footer/main-footer.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FornecedorListComponent } from './fornecedor/fornecedor-list/fornecedor-list.component';
+import { EditoraListComponent } from './editora/editora-list/editora-list.component';
+import { ConfirmDlgComponent } from './ui/confirm-dlg/confirm-dlg.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FornecedorListComponent } from './fornecedor/fornecedor-list/fornecedor
     MainToolbarComponent,
     MainMenuComponent,
     MainFooterComponent,
-    FornecedorListComponent
+    EditoraListComponent,
+    ConfirmDlgComponent
   ],
   imports: [
     BrowserModule,

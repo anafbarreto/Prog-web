@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FornecedorListComponent } from './fornecedor/fornecedor-list/fornecedor-list.component';
+import { EditoraListComponent } from './editora/editora-list/editora-list.component'
 
 
 const routes: Routes = [
   {
-    path: 'fornecedor', //no angular não usa barra (/) antes do nome da rota
-    component: FornecedorListComponent
+    path: 'editora', //no angular não usa barra (/) antes do nome da rota
+    component: EditoraListComponent
   }
 ];
 

@@ -12,3 +12,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-table {
     width: 100%;
 }
+
+//ocultar o botão "excluir" da tabela 
+.mat-row {
+    button {
+        visibility: hidden} 
+
+// estado do mouse
+    &:hover { 
+      filter: brightness(110%);
+      button {visibility: visible}
+            
+    }
+}
