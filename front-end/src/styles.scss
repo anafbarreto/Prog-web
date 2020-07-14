@@ -13,15 +13,26 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 100%;
 }
 
-//ocultar o botão "excluir" da tabela 
+//ocultar o botão "excluir" e "editar" da tabela 
 .mat-row {
-    button {
+    mat-raised-button {
         visibility: hidden} 
 
 // estado do mouse
     &:hover { 
       filter: brightness(110%);
-      button {visibility: visible}
-            
+      mat-raised-button {visibility: visible}         
     }
 }
+.new-item-button-container { // botão de cadastro
+    margin-bottom: 20px;
+    text-align: right;
+
+.mat-raised-button {
+    font-size: 100%;
+    }
+}
+
+
+
+

@@ -13,7 +13,7 @@ import { ConfirmDlgComponent } from 'src/app/ui/confirm-dlg/confirm-dlg.componen
 export class EditoraListComponent implements OnInit {
 
   editora: any = [] //vetor vazio
-  displayedColumns: string[] = ['_id', 'nome_fantasia', 'cnpj', 'telefone', 'excluir']
+  displayedColumns: string [] = ['_id', 'nome_fantasia', 'cnpj', 'telefone', 'editar', 'excluir']
 
   constructor(private editoraSrv: EditoraService,
     private snackBar: MatSnackBar,

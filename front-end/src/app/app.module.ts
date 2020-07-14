@@ -11,7 +11,8 @@ import { MainMenuComponent } from './ui/main-menu/main-menu.component';
 import { MainFooterComponent } from './ui/main-footer/main-footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EditoraListComponent } from './editora/editora-list/editora-list.component';
-import { ConfirmDlgComponent } from './ui/confirm-dlg/confirm-dlg.component'
+import { ConfirmDlgComponent } from './ui/confirm-dlg/confirm-dlg.component';
+import { EditoraFormComponent } from './editora/editora-form/editora-form.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ConfirmDlgComponent } from './ui/confirm-dlg/confirm-dlg.component'
     MainMenuComponent,
     MainFooterComponent,
     EditoraListComponent,
-    ConfirmDlgComponent
+    ConfirmDlgComponent,
+    EditoraFormComponent
   ],
   imports: [
     BrowserModule,
