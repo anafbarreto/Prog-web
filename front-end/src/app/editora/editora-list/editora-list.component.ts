@@ -13,6 +13,7 @@ import { ConfirmDlgComponent } from 'src/app/ui/confirm-dlg/confirm-dlg.componen
 export class EditoraListComponent implements OnInit {
 
   editora: any = [] //vetor vazio
+
   displayedColumns: string [] = ['_id', 'nome_fantasia', 'cnpj', 'telefone', 'editar', 'excluir']
 
   constructor(private editoraSrv: EditoraService,
@@ -35,6 +36,7 @@ export class EditoraListComponent implements OnInit {
     let result = await dialogRef.afterClosed().toPromise();
 
     // (confirm('Deseja excluir este item?')) 
+    
     if (result) {
       try {
         await this.editoraSrv.excluir(id)

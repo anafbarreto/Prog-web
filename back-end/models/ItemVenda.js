@@ -31,7 +31,7 @@ const esquema = mongoose.Schema({
       ref: 'Produto',
       required: true
    }
-})
+ })
 
 /*
    Parâmetros do método mongoose.model()

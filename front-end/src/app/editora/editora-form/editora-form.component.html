@@ -1,1 +1,50 @@
-<p>editora-form works!</p>
+<!-- o titulo será definido a partir de um vetor que determina se é um novo fornecedor ou uma atualização -->
+
+<h1>{{ title }}</h1>
+
+<form class="std-form" #f="ngForm" (ngSubmit)="salvar(f)">
+    <mat-form-field appearance="fill">
+        <mat-label>CNPJ</mat-label>
+        <input matInput [(ngModel)]="editora.cnpj" name="cnpj" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Razão social</mat-label>
+        <input matInput [(ngModel)]="editora.razao_social" name="razao_social" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Nome fantasia</mat-label>
+        <input matInput [(ngModel)]="editora.nome_fantasia" name="nome_fantasia" placeholder="(opcional)">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Inscrição estadual</mat-label>
+        <input matInput [(ngModel)]="editora.inscricao_estadual" name="inscricao_estadual">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Endereço</mat-label>
+        <input matInput [(ngModel)]="editora.endereco" name="endereco" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Telefone</mat-label>
+        <input matInput [(ngModel)]="editora.telefone" name="telefone" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label type="email"> E-mail</mat-label>
+        <input matInput [(ngModel)]="editora.email" name="email" required>
+    </mat-form-field>
+    <br>
+    <br>
+    <mat-toolbar class="form-buttons">
+        <mat-toolbar-row>
+            <button mat-raised-button type="submit" color="accent"> Salvar </button>
+            <button mat-raised-button type="button" (click)="voltar(f)"> Voltar </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <br>
+
+</form>

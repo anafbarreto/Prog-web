@@ -5,7 +5,7 @@ import { environment as env } from './../../environments/environment'; // import
 @Injectable({
   providedIn: 'root'
 })
-export class EditoraService {
+export class ClienteService {
 
   // injeção de dependencias: ao invés de criarmos manualmente as dependencias necessárias
   // o próprio Angular cria e injeta o objeto já instanciado
@@ -14,14 +14,14 @@ export class EditoraService {
   constructor(private http: HttpClient) { }
 
 
-   // nomeia a api base para substituir o http://localhost:3000/editora
+   // nomeia a api base para substituir o http://localhost:3000/cliente
    // apiBaseUri é gerada em environments.ts
-   // apiBaseUri = http://localhost:3000/ + editora 
+   // apiBaseUri = http://localhost:3000/ + cliente 
    
-  private apiUri: string = env.apiBaseUri + 'editora' 
+  private apiUri: string = env.apiBaseUri + 'cliente' 
 
   listar() {
-    return this.http.get('http://localhost:3000/editora').toPromise()
+    return this.http.get('http://localhost:3000/cliente').toPromise()
   }
 
   /* listar() {
@@ -30,20 +30,21 @@ export class EditoraService {
   */
 
   excluir(id: string) {
-    return this.http.request('DELETE', 'http://localhost:3000/editora', { body: { _id: id } }).toPromise()
+    return this.http.request('DELETE', 'http://localhost:3000/cliente', { body: { _id: id } }).toPromise()
 
   }
 
   novo(body: any) {
-    return this.http.post('http://localhost:3000/editora', body).toPromise
+    return this.http.post('http://localhost:3000/cliente', body).toPromise
   }
 
   atualizar(body: any) {
-    return this.http.put('http://localhost:3000/editora', body).toPromise
+    return this.http.put('http://localhost:3000/cliente', body).toPromise
   }
 
   obterUm(id: string) {
-    return this.http.get('http://localhost:3000/editora' + '/' + id).toPromise
+    return this.http.get('http://localhost:3000/cliente' + '/' + id).toPromise
   }
 
 }
+
